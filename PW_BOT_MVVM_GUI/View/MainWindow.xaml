@@ -1,0 +1,36 @@
+﻿<Window x:Class="PW_BOT_MVVM_GUI.View.MainWindow"
+        x:Name="headWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PW_BOT_MVVM_GUI.View"
+        xmlns:vmodel="clr-namespace:PW_BOT_MVVM_GUI.ViewModel"
+        xmlns:p="clr-namespace:PW_BOT_MVVM_GUI.Properties"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        Top="{Binding Source={x:Static p:Settings.Default}, Path=Top, Mode=TwoWay}"
+        Left="{Binding Source={x:Static p:Settings.Default}, Path=Left, Mode=TwoWay}"
+        Width="{Binding Source={x:Static p:Settings.Default}, Path=Width, Mode=TwoWay}"
+        Height="{Binding Source={x:Static p:Settings.Default}, Path=Height, Mode=TwoWay}"
+        mc:Ignorable="d"
+        Title="MainWindow">
+
+    <Window.Resources>
+        
+    </Window.Resources>
+    <i:Interaction.Triggers>
+
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}"/>
+        </i:EventTrigger>
+
+        <i:EventTrigger EventName="Closing">
+            <i:InvokeCommandAction Command="{Binding OnClosingCommand}"/>
+        </i:EventTrigger>
+        
+    </i:Interaction.Triggers>
+
+    <Grid>
+        
+    </Grid>
+</Window>

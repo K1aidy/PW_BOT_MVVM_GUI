@@ -1,0 +1,17 @@
+D:\C#\git\PW_BOT_MVVM_GUI\bin\Debug\PW_BOT_MVVM_GUI.exe.config
+D:\C#\git\PW_BOT_MVVM_GUI\bin\Debug\PW_BOT_MVVM_GUI.exe
+D:\C#\git\PW_BOT_MVVM_GUI\bin\Debug\PW_BOT_MVVM_GUI.pdb
+D:\C#\git\PW_BOT_MVVM_GUI\obj\Debug\App.g.cs
+D:\C#\git\PW_BOT_MVVM_GUI\obj\Debug\PW_BOT_MVVM_GUI_MarkupCompile.cache
+D:\C#\git\PW_BOT_MVVM_GUI\obj\Debug\PW_BOT_MVVM_GUI_MarkupCompile.lref
+D:\C#\git\PW_BOT_MVVM_GUI\obj\Debug\PW_BOT_MVVM_GUI.g.resources
+D:\C#\git\PW_BOT_MVVM_GUI\obj\Debug\PW_BOT_MVVM_GUI.Properties.Resources.resources
+D:\C#\git\PW_BOT_MVVM_GUI\obj\Debug\PW_BOT_MVVM_GUI.csproj.GenerateResource.Cache
+D:\C#\git\PW_BOT_MVVM_GUI\obj\Debug\PW_BOT_MVVM_GUI.csproj.CoreCompileInputs.cache
+D:\C#\git\PW_BOT_MVVM_GUI\obj\Debug\PW_BOT_MVVM_GUI.exe
+D:\C#\git\PW_BOT_MVVM_GUI\obj\Debug\PW_BOT_MVVM_GUI.pdb
+D:\C#\git\PW_BOT_MVVM_GUI\obj\Debug\View\MainWindow.g.cs
+D:\C#\git\PW_BOT_MVVM_GUI\obj\Debug\View\MainWindow.baml
+D:\C#\git\PW_BOT_MVVM_GUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\C#\git\PW_BOT_MVVM_GUI\bin\Debug\System.Windows.Interactivity.dll
+D:\C#\git\PW_BOT_MVVM_GUI\obj\Debug\PW_BOT_MVVM_GUI.csprojResolveAssemblyReference.cache
