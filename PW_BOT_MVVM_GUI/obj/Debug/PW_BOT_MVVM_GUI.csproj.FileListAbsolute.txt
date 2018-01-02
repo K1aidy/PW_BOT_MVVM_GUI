@@ -130,3 +130,5 @@ N:\111\MyPwBot\PW_BOT_MVVM_GUI\bin\Debug\System.Windows.Interactivity.dll
 N:\111\MyPwBot\PW_BOT_MVVM_GUI\bin\Debug\Ofset.pdb
 N:\111\MyPwBot\PW_BOT_MVVM_GUI\obj\Debug\PW_BOT_MVVM_GUI.csproj.CoreCompileInputs.cache
 N:\111\MyPwBot\PW_BOT_MVVM_GUI\obj\Debug\PW_BOT_MVVM_GUI.exe
+N:\111\MyPwBot\PW_BOT_MVVM_GUI\bin\Debug\PWFramework_Mnogoletov.dll
+N:\111\MyPwBot\PW_BOT_MVVM_GUI\bin\Debug\PWFramework_Mnogoletov.pdb

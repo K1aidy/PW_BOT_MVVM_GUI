@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
 
-namespace PW_BOT_MVVM_GUI.Model
+namespace PWFramework_Mnogoletov
 {
     public class RelayCommand : ICommand
     {

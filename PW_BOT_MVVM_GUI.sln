@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PW_BOT_MVVM_GUI", "PW_BOT_M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ofset", "Ofset\Ofset.csproj", "{7200603B-AB3F-4FFB-9DC5-3826FC13DC43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PWFramework", "PWFramework\PWFramework.csproj", "{70026D0E-B859-4571-A83E-8A091626CDFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7200603B-AB3F-4FFB-9DC5-3826FC13DC43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7200603B-AB3F-4FFB-9DC5-3826FC13DC43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7200603B-AB3F-4FFB-9DC5-3826FC13DC43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70026D0E-B859-4571-A83E-8A091626CDFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70026D0E-B859-4571-A83E-8A091626CDFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70026D0E-B859-4571-A83E-8A091626CDFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70026D0E-B859-4571-A83E-8A091626CDFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,5 @@
 ﻿using Ofset;
-using PW_BOT_MVVM_GUI.Model;
+using PWFramework_Mnogoletov;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

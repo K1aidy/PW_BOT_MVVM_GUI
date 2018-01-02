@@ -65,7 +65,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Model\RelayCommand.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -104,6 +103,13 @@
       <Project>{7200603b-ab3f-4ffb-9dc5-3826fc13dc43}</Project>
       <Name>Ofset</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PWFramework\PWFramework.csproj">
+      <Project>{70026d0e-b859-4571-a83e-8a091626cdff}</Project>
+      <Name>PWFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
