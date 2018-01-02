@@ -99,6 +99,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Ofset\Ofset.csproj">
+      <Project>{7200603b-ab3f-4ffb-9dc5-3826fc13dc43}</Project>
+      <Name>Ofset</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

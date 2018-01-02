@@ -1,0 +1,17 @@
+N:\111\PW_BOT_MVVM_GUI\Ofset\bin\Debug\netstandard2.0\Ofset.deps.json
+N:\111\PW_BOT_MVVM_GUI\Ofset\bin\Debug\netstandard2.0\Ofset.dll
+N:\111\PW_BOT_MVVM_GUI\Ofset\bin\Debug\netstandard2.0\Ofset.pdb
+N:\111\PW_BOT_MVVM_GUI\Ofset\obj\Debug\netstandard2.0\Ofset.csproj.CoreCompileInputs.cache
+N:\111\PW_BOT_MVVM_GUI\Ofset\obj\Debug\netstandard2.0\Ofset.AssemblyInfoInputs.cache
+N:\111\PW_BOT_MVVM_GUI\Ofset\obj\Debug\netstandard2.0\Ofset.AssemblyInfo.cs
+N:\111\PW_BOT_MVVM_GUI\Ofset\obj\Debug\netstandard2.0\Ofset.dll
+N:\111\PW_BOT_MVVM_GUI\Ofset\obj\Debug\netstandard2.0\Ofset.pdb
+N:\111\MyPwBot\Ofset\bin\Debug\netstandard2.0\Ofset.deps.json
+N:\111\MyPwBot\Ofset\bin\Debug\netstandard2.0\Ofset.dll
+N:\111\MyPwBot\Ofset\bin\Debug\netstandard2.0\Ofset.pdb
+N:\111\MyPwBot\Ofset\obj\Debug\netstandard2.0\Ofset.csproj.CoreCompileInputs.cache
+N:\111\MyPwBot\Ofset\obj\Debug\netstandard2.0\Ofset.AssemblyInfoInputs.cache
+N:\111\MyPwBot\Ofset\obj\Debug\netstandard2.0\Ofset.AssemblyInfo.cs
+N:\111\MyPwBot\Ofset\obj\Debug\netstandard2.0\Ofset.dll
+N:\111\MyPwBot\Ofset\obj\Debug\netstandard2.0\Ofset.pdb
+N:\111\MyPwBot\Ofset\obj\Debug\netstandard2.0\Ofset.csprojResolveAssemblyReference.cache

@@ -1,4 +1,5 @@
-﻿using PW_BOT_MVVM_GUI.Model;
+﻿using Ofset;
+using PW_BOT_MVVM_GUI.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,12 @@ namespace PW_BOT_MVVM_GUI.ViewModel
     {
         RelayCommand loadedCommand;
         RelayCommand onClosingCommand;
+
+        public MainViewModel()
+        {
+            OfsPresenter.setConfig(Environment.CurrentDirectory + @"\ofs.txt", typeof(TxtReader));
+            var t = OfsPresenter.getInstance("BA+GA");
+        }
 
         //команда выполняемая при загрузке главного окна
         public RelayCommand LoadedCommand
