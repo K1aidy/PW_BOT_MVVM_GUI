@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PWFramework_Mnogoletov
+namespace PWFramework
 {
     /// <summary>
     /// Класс, содержащий необходимые оффсеты

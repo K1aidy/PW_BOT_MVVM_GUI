@@ -3,7 +3,7 @@ using System.Text;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace PWFramework_Mnogoletov
+namespace PWFramework
 {
     /// <summary>
     /// Набор структур, методов и констант для работы с неуправляемым кодом.
@@ -396,6 +396,8 @@ namespace PWFramework_Mnogoletov
               int wParam,  // first message parameter
               string lParam   // second message parameter
               );
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int uMsg, int wParam, IntPtr lParam);
         [Flags]
         public enum Msg
         {
@@ -404,6 +406,11 @@ namespace PWFramework_Mnogoletov
             ButtonDown = 0x201, //нажать кнопку
             ButtonUp = 0x202 //отпустить кнопку
         }
+        //[return: MarshalAs(UnmanagedType.Bool)]
+        //[DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        //static extern bool PostMessage(HandleRef hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern bool PostMessage(IntPtr hWnd, uint Msg, int wParam, int lParam);
 
     }
 }

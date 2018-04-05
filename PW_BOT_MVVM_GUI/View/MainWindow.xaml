@@ -13,24 +13,107 @@
         Width="{Binding Source={x:Static p:Settings.Default}, Path=Width, Mode=TwoWay}"
         Height="{Binding Source={x:Static p:Settings.Default}, Path=Height, Mode=TwoWay}"
         mc:Ignorable="d"
-        Title="MainWindow">
+        Title="TIGR" Icon="/PW_BOT_MVVM_GUI;component/unnamed.ico" Cursor="Arrow" BorderBrush="#FF1E0D44">
 
     <Window.Resources>
-        
+        <Style x:Key="SimpleListBoxItem" TargetType="ListBoxItem">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border Name="Border" Padding="2" SnapsToDevicePixels="true">
+                            <ContentPresenter/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="true">
+                                <Setter TargetName="Border" Property="Background" Value="#FFB6B6D1"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
-    <i:Interaction.Triggers>
 
+    <Window.DataContext>
+        <vmodel:MainViewModel />
+    </Window.DataContext>
+
+    <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
-            <i:InvokeCommandAction Command="{Binding LoadedCommand}"/>
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}"  CommandParameter="{Binding ElementName=headWindow}"/>
         </i:EventTrigger>
 
         <i:EventTrigger EventName="Closing">
             <i:InvokeCommandAction Command="{Binding OnClosingCommand}"/>
         </i:EventTrigger>
-        
+
     </i:Interaction.Triggers>
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="80*"/>
+        </Grid.RowDefinitions>
+
+        <Button IsEnabled="False" Visibility="Hidden" Content="elementclient.exe" Command="{Binding OpenExeFile}" Margin="46,0,46,61" Grid.Row="2"/>
+        <StackPanel Orientation="Horizontal" Margin="3" Background="#FFD4E6F5" Grid.Row="0">
+            <Button Margin="10" Width="80" Content="START">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <i:InvokeCommandAction
+                                    Command="{Binding StartBotCommand}"
+                                    CommandParameter="{Binding ElementName=BotList}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+            <Button Margin="10" Width="80" Content="STOP">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <i:InvokeCommandAction
+                                    Command="{Binding StopBotCommand}"
+                                    CommandParameter="{Binding ElementName=BotList}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+            <Button Margin="10" Width="80" Content="BUTTON3"></Button>
+            <Button Margin="10" Width="80" Content="BUTTON4"></Button>
+            <Button Margin="10" Width="80" Content="BUTTON5"></Button>
+        </StackPanel>
+
+        <ItemsControl x:Name="BotButtons" Background="#FFD4E6F5" Grid.Row="1" Margin="3" ItemsSource="{Binding CurrentApp.BtnCollection}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button Margin="10" Width="80" Content="{Binding Name}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction
+                                    Command="{Binding СlickButtonCommand}"
+                                    CommandParameter="{Binding ElementName=BotList, Path=SelectedItem}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+        <ListBox x:Name="BotList" Background="#FFD4E6F5" Grid.Row="2" Margin="3" SelectionMode="Multiple"
+                 ItemContainerStyle="{StaticResource SimpleListBoxItem}"
+                 ItemsSource="{Binding CurrentApp.BotCollection}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Height="20" Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center" Margin="20, 0, 20, 0" Text="{Binding Name}" Width="80"/>
+                        <!--<CheckBox VerticalAlignment="Center" Margin="20, 0, 20, 0" IsChecked="{Binding Checked}"></CheckBox>-->
+                        <TextBox VerticalAlignment="Center" Margin="20, 0, 20, 0" Text="{Binding Parameter, Mode=TwoWay}" Width="150"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>

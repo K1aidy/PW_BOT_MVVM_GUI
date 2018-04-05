@@ -3,7 +3,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
-namespace PWFramework_Mnogoletov
+namespace PWFramework
 {
     public static class Serialize
     {

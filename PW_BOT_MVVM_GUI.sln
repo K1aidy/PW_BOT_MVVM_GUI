@@ -5,9 +5,15 @@ VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PW_BOT_MVVM_GUI", "PW_BOT_MVVM_GUI\PW_BOT_MVVM_GUI.csproj", "{FDC6EF62-B3FE-45C2-999D-DA9F72FAF7A1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ofset", "Ofset\Ofset.csproj", "{7200603B-AB3F-4FFB-9DC5-3826FC13DC43}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PWFramework", "PWFramework\PWFramework.csproj", "{70026D0E-B859-4571-A83E-8A091626CDFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotConstructor", "BotConstructor\BotConstructor.csproj", "{85D52A01-54EE-4D86-8A00-3A509F311A0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBotAddon", "TestBotAddon\TestBotAddon.csproj", "{9280814A-BE94-47C5-86A8-ADA55509FC3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotLibrary", "BotLibrary\BotLibrary.csproj", "{5E59A48B-C41D-41DA-8914-75659E4BB7EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBotAddon", "TelegramBotAddon\TelegramBotAddon.csproj", "{09D88A67-8F82-4DEA-95AB-31E9BA0F3CB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +25,26 @@ Global
 		{FDC6EF62-B3FE-45C2-999D-DA9F72FAF7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDC6EF62-B3FE-45C2-999D-DA9F72FAF7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDC6EF62-B3FE-45C2-999D-DA9F72FAF7A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7200603B-AB3F-4FFB-9DC5-3826FC13DC43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7200603B-AB3F-4FFB-9DC5-3826FC13DC43}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7200603B-AB3F-4FFB-9DC5-3826FC13DC43}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7200603B-AB3F-4FFB-9DC5-3826FC13DC43}.Release|Any CPU.Build.0 = Release|Any CPU
 		{70026D0E-B859-4571-A83E-8A091626CDFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{70026D0E-B859-4571-A83E-8A091626CDFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70026D0E-B859-4571-A83E-8A091626CDFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70026D0E-B859-4571-A83E-8A091626CDFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85D52A01-54EE-4D86-8A00-3A509F311A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85D52A01-54EE-4D86-8A00-3A509F311A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85D52A01-54EE-4D86-8A00-3A509F311A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85D52A01-54EE-4D86-8A00-3A509F311A0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9280814A-BE94-47C5-86A8-ADA55509FC3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9280814A-BE94-47C5-86A8-ADA55509FC3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9280814A-BE94-47C5-86A8-ADA55509FC3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9280814A-BE94-47C5-86A8-ADA55509FC3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E59A48B-C41D-41DA-8914-75659E4BB7EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E59A48B-C41D-41DA-8914-75659E4BB7EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E59A48B-C41D-41DA-8914-75659E4BB7EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E59A48B-C41D-41DA-8914-75659E4BB7EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09D88A67-8F82-4DEA-95AB-31E9BA0F3CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09D88A67-8F82-4DEA-95AB-31E9BA0F3CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09D88A67-8F82-4DEA-95AB-31E9BA0F3CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09D88A67-8F82-4DEA-95AB-31E9BA0F3CB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

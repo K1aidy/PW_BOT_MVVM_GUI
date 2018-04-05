@@ -1,0 +1,1 @@
+{"Name":"TestApp","BotCollection":[{"Name":"FirstBot","RepositoryName":"TestBotAddon.TestBot","CheckMethods":null,"Filters":null},{"Name":"SecondBot","RepositoryName":"TestBotAddon.TestBot","CheckMethods":null,"Filters":null},{"Name":"NewBot","RepositoryName":"","CheckMethods":null,"Filters":null}]}

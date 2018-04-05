@@ -24,7 +24,6 @@ namespace PW_BOT_MVVM_GUI.View
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new MainViewModel();
         }
     }
 }

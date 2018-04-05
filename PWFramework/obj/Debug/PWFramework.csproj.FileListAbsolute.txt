@@ -4,3 +4,9 @@ N:\C#\ПВ\PWFramework\PWFramework\obj\Debug\PWFramework_Mnogoletov.dll
 N:\C#\ПВ\PWFramework\PWFramework\obj\Debug\PWFramework_Mnogoletov.pdb
 N:\C#\ПВ\PWFramework\PWFramework\obj\Debug\PWFramework.csprojResolveAssemblyReference.cache
 N:\C#\ПВ\PWFramework\PWFramework\obj\Debug\PWFramework.csproj.CoreCompileInputs.cache
+N:\111\MyPwBot\PWFramework\bin\Debug\PWFramework_Mnogoletov.dll
+N:\111\MyPwBot\PWFramework\bin\Debug\PWFramework_Mnogoletov.pdb
+N:\111\MyPwBot\PWFramework\obj\Debug\PWFramework.csproj.CoreCompileInputs.cache
+N:\111\MyPwBot\PWFramework\obj\Debug\PWFramework_Mnogoletov.dll
+N:\111\MyPwBot\PWFramework\obj\Debug\PWFramework_Mnogoletov.pdb
+N:\111\MyPwBot\PWFramework\obj\Debug\PWFramework.csprojResolveAssemblyReference.cache

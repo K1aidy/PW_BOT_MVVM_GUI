@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace PWFramework_Mnogoletov
+namespace PWFramework
 {
     public class RefreshListClients
     {

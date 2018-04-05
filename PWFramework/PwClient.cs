@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace PWFramework_Mnogoletov
+namespace PWFramework
 {
     public class PwClient : INotifyPropertyChanged
     {
@@ -26,6 +26,13 @@ namespace PWFramework_Mnogoletov
             private set { name = value; OnPropertyChanged("name"); }
         }
 
+        protected Int32 money;
+        public Int32 Money
+        {
+            get { return money; }
+            set { money = value; OnPropertyChanged("Money"); }
+        }
+
         protected Int32 processID;
         public Int32 ProcessID
         {
@@ -40,7 +47,8 @@ namespace PWFramework_Mnogoletov
             WinApi.GetWindowThreadProcessId(descript, out processID);
             ProcessID = processID;
             handle = WinApi.OpenProcess(WinApi.ProcessAccessFlags.All, false, ProcessID);
-            Name = CalcMethods.ReadString(handle, Offsets.getInstance().BaseAdress, Offsets.getInstance().GetName);
+            Name = CalcMethods.ReadString(handle, OfsPresenter.getInstance("BA")[0], OfsPresenter.getInstance("GA+Player+Name+0x0"));
+            Money = CalcMethods.ReadInt(handle, OfsPresenter.getInstance("BA")[0], OfsPresenter.getInstance("GA+Player+Money"));
         }
         ~PwClient()
         {
@@ -61,17 +69,11 @@ namespace PWFramework_Mnogoletov
 
         public static Boolean operator == (PwClient pw_1, PwClient pw_2)
         {
-            if (pw_1.ProcessID == pw_2.ProcessID && pw_1.Name == pw_2.Name)
-                return true;
-            else
-                return false;
+            return pw_1?.Equals(pw_2) ?? false;
         }
         public static Boolean operator !=(PwClient pw_1, PwClient pw_2)
         {
-            if (pw_1.ProcessID == pw_2.ProcessID && pw_1.Name == pw_2.Name)
-                return false;
-            else
-                return true;
+            return !(pw_1 == pw_2);
         }
         public override bool Equals(Object obj)
         {
