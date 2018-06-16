@@ -71,7 +71,7 @@ namespace PW_BOT_MVVM_GUI.ViewModel
                         (o) => {
                             try
                             {
-                                OfsFinder.FindOfset(Environment.CurrentDirectory + @"\regular.txt", Environment.CurrentDirectory + @"\PW.exe", "");
+                                OfsFinder.FindOfset(Environment.CurrentDirectory + @"\regular.txt", Environment.CurrentDirectory + @"\PW.exe", Environment.CurrentDirectory + @"\PW.txt");
                                 //OpenFileDialog ofd = new OpenFileDialog();
                                 //ofd.Filter = "elementclient.exe|*.exe|Все файлы|*.*";
                                 //if (ofd.ShowDialog() == true)
@@ -143,6 +143,8 @@ namespace PW_BOT_MVVM_GUI.ViewModel
                                         CurrentApp.BotCollection[i] = tempBot;
                                     }
                                 }
+
+                                //OfsFinder.FindOfset(Environment.CurrentDirectory + @"\regular.txt", Environment.CurrentDirectory + @"\PW.exe", Environment.CurrentDirectory + @"\PW.txt");
                             }
                             catch (Exception ex)
                             {

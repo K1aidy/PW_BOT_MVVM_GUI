@@ -10,14 +10,13 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Telegram.Bot;
+//using Telegram.Bot;
 
 namespace TelegramBotAddon
 {
     public class NanamiBot: Bot
     {
         PwClient bot;
-        TelegramBotClient telebot;
         Int32[] btn_address;
         Int32 oldMoneyValue;
         Int64 chatid;
@@ -31,18 +30,9 @@ namespace TelegramBotAddon
 
             if (!this.IsStart)
             {
-                botId = ConfigurationManager.AppSettings[param.ToString()];
-                if (String.IsNullOrEmpty(botId)) throw new Exception($"Не найден телеграм-бот {param.ToString()}");
-                //запускаем бота
-                telebot = new TelegramBotClient(botId);
-                telebot.SetWebhookAsync("");
-                //ищем id чата
-                Int64.TryParse(ConfigurationManager.AppSettings["ChatId"], out chatid);
                 bot = PwUtils.Pw_CLient_Search(param.ToString(), bot);
                 if (bot == null) return;
                 PwUtils.GetCords(this.bot, out this.x, out this.y, out this.z);
-
-
 
                 this.IsStart = !this.IsStart;
             }
@@ -64,7 +54,6 @@ namespace TelegramBotAddon
                     PwUtils.GetCords(this.bot, out x_new, out y_new, out z_new);
                     if (x_new == this.x && y_new == this.y && z_new == this.z)
                     {
-                        //telebot.SendTextMessageAsync(chatid, $"Я не двигалась больше 10 секунд").Wait();
                         for (int i = 0; i < 4; i++)
                         {
                             //Посылаем F12 4 раза
@@ -80,24 +69,7 @@ namespace TelegramBotAddon
                 {
                     //если не изменилось количество денег, то отправляем уведомление в телеграм
                     PwUtils.CheckMoney(bot);
-                    if (oldMoneyValue == bot.Money)
-                        telebot.SendTextMessageAsync(chatid, $"У меня не меняется количество денег").Wait();
                     oldMoneyValue = bot.Money;
-
-                    //обработка последних сообщений в телеграме
-                    var updates = telebot.GetUpdatesAsync(msgCount).Result;
-                    foreach (var update in updates) // Перебираем все обновления
-                    {
-                        
-                        if (update.Message.Type == Telegram.Bot.Types.Enums.MessageType.TextMessage)
-                        {
-                            if (update.Message.Text == "/addme")
-                            {
-                                //обработка текста
-                            }
-                        }
-                        msgCount = update.Id + 1;
-                    }
                 }
                 //жмем атаку
                 var visible = CalcMethods.CalcByteValue(bot.Handle, btn_address[0] + OfsPresenter.getInstance("WND_VIS")[0]);

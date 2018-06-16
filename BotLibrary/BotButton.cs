@@ -71,7 +71,7 @@ namespace BotLibrary
                             {
                                 var bot = o as Bot;
                                 if (bot == null) return;
-                                this.ClassButton?.Do(bot).Start();
+                                this.ClassButton?.Do(bot).Wait();
 
                             }
                             catch (Exception ex)

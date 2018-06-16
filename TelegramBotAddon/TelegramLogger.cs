@@ -6,32 +6,53 @@ using System.Collections.ObjectModel;
 using System.Collections;
 using System.Threading;
 using PWFramework;
+using System.Diagnostics;
+using Citrina;
+using xNet;
+using System.Configuration;
+using System.Linq;
 
 namespace TelegramBotAddon
 {
     public class TelegramLogger:Bot
     {
-        TelegramBotClient bot;
-        Int32 msgCount;
-        List<long> chats = new List<long>() { -317512838 };
+        CitrinaClient client;
+        UserAccessToken token;
         Hashtable ht = new Hashtable();
         Dictionary<string, int> oldMoneyValue = new Dictionary<string, int>();
         ObservableCollection<PwClient> pwclients = new ObservableCollection<PwClient>();
-        List<String> botList = new List<string>()
-        {
-
-        };
+        List<string> botList;
+        //= new List<string>()
+        //{
+        //    "НочнаЯ",
+        //    "Пипикус",
+        //    "=Хвост=",
+        //    "=Импульс=",
+        //    "=Куба=",
+        //    "~Ёкай~_perseus",
+        //    "НАНАМИ_perseus",
+        //    "Акaцуки",
+        //    "=Африка=",
+        //    "Фикус_perseus",
+        //    "Дерзостb",
+        //    "Щирое",
+        //    "СИБИРЬ_perseus",
+        //    "M@nuynya",
+        //    "K1aidу",
+        //    "=Америка="
+        //};
 
         public override void Do(object param)
         {
             if (!this.IsStart)
             {
                 //запускаем бота
-                bot = new TelegramBotClient(param.ToString());
-                bot.SetWebhookAsync("");
-                
                 this.IsStart = !this.IsStart;
             }
+            botList = ConfigurationManager.AppSettings["bot_list"].Split().ToList();
+
+            client = new CitrinaClient();
+            token = new UserAccessToken(value: param.ToString(), expiresIn: 3600, userId: 484592218, appId: 6456865);
 
             while (true)
             {
@@ -43,27 +64,8 @@ namespace TelegramBotAddon
                         continue;
                     PwUtils.CheckMoney(pw);
                     if (oldMoneyValue[pw.Name] == pw.Money)
-                        chats.ForEach(s => bot.SendTextMessageAsync(s, $"У {pw.Name} не меняется количество денег").Wait());
+                        client.Messages.Send(token, message: $"У {pw.Name} не меняется количество денег", chatId: 1).Wait();
                     oldMoneyValue[pw.Name] = pw.Money;
-                }
-                var updates = bot.GetUpdatesAsync(msgCount).Result;
-
-                foreach (var update in updates) // Перебираем все обновления
-                {
-                    //System.Windows.MessageBox.Show(update.Message.Chat.Id.ToString() + " " + update.Message.MessageId + " " + update.Id);
-                    if (update.Message.Type == Telegram.Bot.Types.Enums.MessageType.TextMessage)
-                    {
-                        if (update.Message.Text == "/addme")
-                        {
-                            //обработка текста
-                        }
-                        //chats.ForEach(s => bot.SendTextMessageAsync(s, $"{msgCount} - {update.Message.Chat.Id} - {update.Message.Text}").Wait());
-                    }
-                    if (update.Message.Type == Telegram.Bot.Types.Enums.MessageType.StickerMessage)
-                    {
-                        chats.ForEach(s => bot.SendStickerAsync(s, new Telegram.Bot.Types.FileToSend(update.Message.Sticker.FileId)).Wait());
-                    }
-                    msgCount = update.Id + 1;
                 }
             }
         }
@@ -139,5 +141,6 @@ namespace TelegramBotAddon
             }
             return -1;
         }
+
     }
 }

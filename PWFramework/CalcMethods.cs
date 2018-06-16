@@ -301,6 +301,7 @@ namespace PWFramework
                 String win_name_AC = String.Empty;
                 String name_control = String.Empty;
                 //считываем начало массива структур окон нижнего или верхнего уровня уровня во временную переменную
+                var xxx = OfsPresenter.getInstance("BA")[0];
                 Int32 temp_address_8C = ReadInt(oph, OfsPresenter.getInstance("BA")[0], new Int32[] { 0x1c, 0x18, 0x8, 0x8C });
                 Int32 temp_address_AC = ReadInt(oph, OfsPresenter.getInstance("BA")[0], new Int32[] { 0x1c, 0x18, 0x8, 0xAC });
                 //в цикле проверяем имя каждого окна, пока не найдем нужное
@@ -336,7 +337,7 @@ namespace PWFramework
                 if (result[0] == 0)
                     return result;
                 //считываем начало массива контролов найденного окна во временную переменную
-                Int32 temp_address = CalcInt32Value(oph, result[0] + 0x1cc);
+                Int32 temp_address = CalcInt32Value(oph, result[0] + 0x1e4);
                 //в цикле проверяем имя каждого контрола, пока не найдем нужное
                 for (Int32 iter = 0; iter < 100; iter++)
                 {

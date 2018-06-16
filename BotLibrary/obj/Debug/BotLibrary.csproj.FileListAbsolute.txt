@@ -1,6 +1,0 @@
-N:\111\MyPwBot\BotLibrary\bin\Debug\BotLibrary.dll
-N:\111\MyPwBot\BotLibrary\bin\Debug\BotLibrary.pdb
-N:\111\MyPwBot\BotLibrary\obj\Debug\BotLibrary.csproj.CoreCompileInputs.cache
-N:\111\MyPwBot\BotLibrary\obj\Debug\BotLibrary.dll
-N:\111\MyPwBot\BotLibrary\obj\Debug\BotLibrary.pdb
-N:\111\MyPwBot\BotLibrary\obj\Debug\BotLibrary.csprojResolveAssemblyReference.cache
